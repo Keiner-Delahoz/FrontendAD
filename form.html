@@ -1,90 +1,130 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registrarse</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-</head>
-  <body class="fondor">
 
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg" >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Union De Esperanza</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Registrarse</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body class="fondor">
+
+   <!-- Barra de navegación -->
+   <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#">Union De Esperanza</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-          <div class="collapse navbar-collapse col-4 " >
-            <ul class="navbar-nav" >
-              <li class="nav-item">
-                <a class="nav-link active " aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item al">
-                <a class="nav-link" href="quienes.html">Quienes Somos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Historia</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         </button>
+      </div>
+      <div class="collapse navbar-collapse col-4 ">
+         <ul class="navbar-nav">
+            <li class="nav-item">
+               <a class="nav-link active " aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item al">
+               <a class="nav-link" href="quienes.html">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Historia</a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Ingresar
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="iniciar.html">Iniciar Seccion</a></li>
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="iniciar.html">Iniciar Seccion</a></li>
                   <li><a class="dropdown-item" href="form.html">Registrarse</a></li>
                   <li><a class="dropdown-item" href="voluntario.html">Voluntario</a></li>
                   <li><a class="dropdown-item" href="funda.html">Fundacion</a></li>
                   <li><a class="dropdown-item" href="bene.html">Beneficiario</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+               </ul>
+            </li>
+         </ul>
+      </div>
+      </div>
+   </nav>
 
-      <div class="container">
-        <form class="formulario">
-           <h1>Registrarse</h1>
+   <div class="container">
+      <form class="formulario" id="form_register">
+         <h1>Registrarse</h1>
 
-           <select id="tipoUsuario" class="form-select" aria-label="Default select example">
-            <option selected>Tipo De Usuario</option>
+         <label for="tipoUsuario">Tipo Usuario</label>
+         <select id="tipoUsuario" class="form-select" aria-label="Default select example" onchange="mostrarCampos()">
+            <option selected disabled>seleccione tipo...</option>
             <option value="Voluntario">Voluntario</option>
             <option value="Fundacion">Fundacion</option>
             <option value="Beneficiario">Beneficiario</option>
-          </select>
-  
-           <label for="id">Identificacion:</label>
-           <input type="text" id="id" required><br>
-  
-           <label for="nombre">Nombre:</label>
-           <input type="text" id="nombre" required><br>
-  
-           <label for="apellido">Apelllido:</label>
-           <input type="text" id="apellido" required><br>
-  
-           <label for="Nacimiento">fecha de Nacimiento:</label>
-           <input type="date" id="Nacimiento" required><br>
+         </select>
 
-           <label for="clave">Contraseña:</label>
-           <input type="text" id="clave" required><br>
+         <!-- Campos para Fundación -->
+         <div id="camposFundacion" style="display: none">
+            <label for="nit">NIT:</label>
+            <input type="number" id="nit" required><br>
+            
+            <label for="nombre">Nombre Entidad:</label>
+            <input type="text" id="nombreFundacion" required><br>
+            
+            <label for="emailFundacion">Email:</label>
+            <input type="email" id="emailFundacion" required>
 
-           <label for="genero">genero:</label>
-           <input type="text" id="genero" required><br>
-           
-           <label for="email">email:</label>
-           <input type="email" id="email" required><br>
-  
-           <input type="submit" value="Registrar" id="btnGuardarAvion">
-        </form>
-     </div>
+            <label for="passwordFundacion">Contraseña:</label>
+            <input type="password" id="passwordFundacion" required><br>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="./services/Registrar.js"></script>
-  </body>
+            <label for="celular">Celular:</label>
+            <input type="number" id="celular" required><br>
+
+            <label for="direccion">Direccion:</label>
+            <input type="text" id="direccion" required><br>
+
+         </div>
+
+         <!-- Campos para Voluntario o Beneficiario -->
+         <div id="camposPersona" style="display: none">
+            <label for="nombrePersona">Nombre:</label>
+            <input type="text" id="nombrePersona" required><br>
+
+            <label for="apellidoPersona">Apelllido:</label>
+            <input type="text" id="apellidoPersona" required><br>
+
+            <label for="id">Identificacion:</label>
+            <input type="number" id="id" required><br>
+
+            <label for="emailPersona">Email:</label>
+            <input type="email" id="emailPersona" required>
+
+            <label for="passwordPersona">Contraseña:</label>
+            <input type="password" id="passwordPersona" required><br>
+
+            <label for="Nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="Nacimiento" required><br>
+
+            <label for="genero">Genero:</label>
+            <select id="genero" class="form-select">
+               <option selected disabled>seleccione...</option>
+               <option value="masculino">Masculino</option>
+               <option value="femenino">Femenino</option>
+            </select>
+
+         </div>
+
+         <input type="submit" value="Registrar" id="btnGuardarAvion">
+      </form>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+   <script src="./services/Register/RegistrarPersona.js"></script>
+   <script src="./services/TipoUsuario.js"></script>
+</body>
+
 </html>

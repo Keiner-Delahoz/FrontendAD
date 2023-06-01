@@ -112,7 +112,10 @@ margin: 0 auto;
   
   .formulario input[type="text"],
   .formulario input[type="email"],
-  .formulario input[type="number"] {
+  .formulario input[type="number"],
+  .formulario input[type="password"],
+  .formulario input[type="date"],
+  .formulario select {
     width: 300px;
     background: #85c1e9 ;
     padding: 1px;
