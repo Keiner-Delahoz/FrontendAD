@@ -18,7 +18,7 @@
    <!-- Barra de navegación -->
    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-         <a class="navbar-brand" href="#">Union De Esperanza</a>
+         <a class="navbar-brand" href="index.html">Union De Esperanza</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,77 +54,79 @@
    </nav>
 
    <div class="container">
-      <form class="formulario" id="form_register">
-         <h1>Registrarse</h1>
-
-         <label for="tipoUsuario">Tipo Usuario</label>
-         <select id="tipoUsuario" class="form-select" aria-label="Default select example" onchange="mostrarCampos()">
-            <option selected disabled>seleccione tipo...</option>
-            <option value="Voluntario">Voluntario</option>
-            <option value="Fundacion">Fundacion</option>
-            <option value="Beneficiario">Beneficiario</option>
-         </select>
-
-         <!-- Campos para Fundación -->
-         <div id="camposFundacion" style="display: none">
-            <label for="nit">NIT:</label>
-            <input type="number" id="nit" required><br>
-            
-            <label for="nombre">Nombre Entidad:</label>
-            <input type="text" id="nombreFundacion" required><br>
-            
-            <label for="emailFundacion">Email:</label>
-            <input type="email" id="emailFundacion" required>
-
-            <label for="passwordFundacion">Contraseña:</label>
-            <input type="password" id="passwordFundacion" required><br>
-
-            <label for="celular">Celular:</label>
-            <input type="number" id="celular" required><br>
-
-            <label for="direccion">Direccion:</label>
-            <input type="text" id="direccion" required><br>
-
-         </div>
-
-         <!-- Campos para Voluntario o Beneficiario -->
-         <div id="camposPersona" style="display: none">
-            <label for="nombrePersona">Nombre:</label>
-            <input type="text" id="nombrePersona" required><br>
-
-            <label for="apellidoPersona">Apelllido:</label>
-            <input type="text" id="apellidoPersona" required><br>
-
-            <label for="id">Identificacion:</label>
-            <input type="number" id="id" required><br>
-
-            <label for="emailPersona">Email:</label>
-            <input type="email" id="emailPersona" required>
-
-            <label for="passwordPersona">Contraseña:</label>
-            <input type="password" id="passwordPersona" required><br>
-
-            <label for="Nacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="Nacimiento" required><br>
-
-            <label for="genero">Genero:</label>
-            <select id="genero" class="form-select">
-               <option selected disabled>seleccione...</option>
-               <option value="masculino">Masculino</option>
-               <option value="femenino">Femenino</option>
+      <div class="register">
+         <form class="formulario" id="form_register">
+            <h1>Registrarse</h1>
+   
+            <label for="tipoUsuario">Tipo Usuario</label>
+            <select id="tipoUsuario" class="form-select" aria-label="Default select example" onchange="mostrarCampos()">
+               <option selected disabled>seleccione tipo...</option>
+               <option value="Voluntario">Solicitudes</option>
+               <option value="Fundacion">Fundacion</option>
+               <option value="Beneficiario">Beneficiario</option>
             </select>
-
-         </div>
-
-         <input type="submit" value="Registrar" id="btnGuardarAvion">
-      </form>
+   
+            <!-- Campos para Fundación -->
+            <div id="camposFundacion" style="display: none">
+               <label for="nit">NIT:</label>
+               <input type="number" id="nit" required><br>
+               
+               <label for="nombre">Nombre Entidad:</label>
+               <input type="text" id="nombreFundacion" required><br>
+               
+               <label for="emailFundacion">Email:</label>
+               <input type="email" id="emailFundacion" required>
+   
+               <label for="passwordFundacion">Contraseña:</label>
+               <input type="password" id="passwordFundacion" required><br>
+   
+               <label for="celular">Celular:</label>
+               <input type="number" id="celular" required><br>
+   
+               <label for="direccion">Direccion:</label>
+               <input type="text" id="direccion" required><br>
+   
+            </div>
+   
+            <!-- Campos para Voluntario o Beneficiario -->
+            <div id="camposPersona" style="display: none">
+               <label for="nombrePersona">Nombre:</label>
+               <input type="text" id="nombrePersona" required><br>
+   
+               <label for="apellidoPersona">Apelllido:</label>
+               <input type="text" id="apellidoPersona" required><br>
+   
+               <label for="id">Identificacion:</label>
+               <input type="number" id="id" required><br>
+   
+               <label for="emailPersona">Email:</label>
+               <input type="email" id="emailPersona" required>
+   
+               <label for="passwordPersona">Contraseña:</label>
+               <input type="password" id="passwordPersona" required><br>
+   
+               <label for="Nacimiento">Fecha de Nacimiento:</label>
+               <input type="date" id="Nacimiento" required><br>
+   
+               <label for="genero">Genero:</label>
+               <select id="genero" class="form-select">
+                  <option selected disabled>seleccione...</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+               </select>
+   
+            </div>
+   
+            <input type="submit" value="Registrar" id="btnGuardarAvion">
+         </form>
+      </div>
    </div>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"></script>
-   <script src="./services/Register/RegistrarPersona.js"></script>
-   <script src="./services/TipoUsuario.js"></script>
+   <script src="./services/Register/RegistrarUsuario.js"></script>
+   <script src="./services/Register/TipoUsuario.js"></script>
 </body>
 
 </html>

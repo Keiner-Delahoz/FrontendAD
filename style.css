@@ -151,20 +151,16 @@ margin: 0 auto;
     background-color:#2471a3 ;
   }
 
-  .formulario1{
-    text-align: center;
-    display: inline-block;
-    width:450px;
-    background: #85c1e9;
-    padding: 50px;
-    margin: auto;
-    margin-top: 20px;
-    margin-block-end: 20px;
-    border-radius: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-  }
+  .formulario1 {
+   text-align: center;
+   width: 450px;
+   background: #85c1e9;
+   padding: 50px;
+   border-radius: 10px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: white;
+   box-shadow: 7px 13px 37px #000;
+ }
   
 
   .chat-container{
@@ -181,3 +177,26 @@ margin: 0 auto;
     box-shadow: 7px 13px 37px #000;
     margin-left: 100px;
   }
+
+  .register {
+   height: 80vh;
+  }
+  
+  .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 80vh;
+ }
+
+ 
+ .btnSolicitarBeneficio {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .btnSolicitarBeneficio a {
+   font-size: 24px; /* Ajusta este tamaño según tus necesidades */
+   padding: 10px 20px; /* Ajusta el relleno (padding) según tus necesidades */
+ }

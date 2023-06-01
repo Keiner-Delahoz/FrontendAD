@@ -1,6 +1,3 @@
-// const form_register = document.getElementById('form_register');
-// const selecTipoUsuario = document.getElementById('tipoUsuario');
-
 function mostrarCampos() {
    var tipoSeleccionado = document.getElementById("tipoUsuario").value;
    
@@ -16,5 +13,3 @@ function mostrarCampos() {
      document.getElementById("camposPersona").style.display = "block";
    }
  }
- 
-

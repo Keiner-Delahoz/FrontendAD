@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 </head>
-  <body class="fondoh">
+  <body class="fondoh" onload="listSolicitudes()">
 
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg" >
@@ -38,7 +38,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="iniciar.html">Iniciar Seccion</a></li>
                   <li><a class="dropdown-item" href="form.html">Registrarse</a></li>
-                  <li><a class="dropdown-item" href="voluntario.html">Voluntario</a></li>
+                  <li><a class="dropdown-item" href="voluntario.html">Solicitudes</a></li>
                   <li><a class="dropdown-item" href="funda.html">Fundacion</a></li>
                   <li><a class="dropdown-item" href="bene.html">Beneficiario</a></li>
                 </ul>
@@ -48,52 +48,27 @@
         </div>
       </nav>
 
-      <div class="card mb-5" stylesheet="max-width: 800px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="Imagenes/pexels-sarwer-e-kainat-welfare-3996734.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Hola Mi Nombre Es Daniel</h5>
-              <p class="card-text">Extendamos nuestra mano a aquellos que viven en las calles, brindémosles calor y esperanza. Un pequeño gesto puede cambiar su vida. Unidos, podemos marcar la diferencia. En las calles, entre sombras olvidadas, viven corazones desamparados. Con amor y compasión, construyamos un refugio de esperanza. Juntos, iluminemos sus caminos hacia un futuro mejor.</p>
-              <a href="solicitud.html" class="btn btn-primary">Ves Solicitud Completa</a> <a href="Contactar.html" class="btn btn-primary">Contactar</a>
-            </div>
-          </div>
-        </div>
+      <hr>
+
+      <div class="btnSolicitarBeneficio">
+         <a href="bene.html" class="btn btn-success btn-sm btn-block">Publica tu solicitud</a>
+      </div>
+      
+      <hr>
+
+      <div id="solicitudesContainer">
+
       </div>
 
-      <div class="card mb-5" stylesheet="max-width: 800px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="Imagenes/pexels-streetwindy-3101214.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Hola Mi Nombre Es Jose</h5>
-              <p class="card-text">Amigos, les pido su apoyo solidario para aquellos que enfrentan dificultades de movilidad. Unámonos para eliminar barreras y proporcionarles acceso equitativo a la sociedad. Con nuestra ayuda, podemos brindarles independencia y mejorar su calidad de vida.</p>
-              <a href="#" class="btn btn-primary">Ves Solicitud Completa</a> <a href="Contactar.html" class="btn btn-primary">Contactar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-5" stylesheet="max-width: 800px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="Imagenes/pexels-rdne-stock-project-6647037.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Hola Mi Nombre Es Antonio</h5>
-              <p class="card-text">Hago un llamado urgente para brindar ayuda a aquellos que necesitan muletas y dispositivos de asistencia. Juntos, podemos proporcionarles la herramienta necesaria para que puedan moverse con dignidad y superar sus desafíos físicos. Demostremos empatía y solidaridad, extendiendo nuestra mano para mejorar su movilidad y calidad de vida.</p>
-              <a href="#" class="btn btn-primary">Ves Solicitud Completa</a> <a href="Contactar.html" class="btn btn-primary">Contactar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <!-- <div class="card mb-5">
+         <div class="card-body">
+            <h5 class="card-title">Hola Mi Nombre Es Antonio</h5>
+            <p class="card-text">Hago un llamado urgente para brindar ayuda a aquellos que necesitan muletas y dispositivos de asistencia. Juntos, podemos proporcionarles la herramienta necesaria para que puedan moverse con dignidad y superar sus desafíos físicos. Demostremos empatía y solidaridad, extendiendo nuestra mano para mejorar su movilidad y calidad de vida.</p>
+            <a href="#" class="btn btn-primary">Ves Solicitud Completa</a> <a href="Contactar.html" class="btn btn-primary">Contactar</a>
+         </div>
+      </div>  -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="services/SolicitudBeneficios/MostrarSolicitudesBeneficios.js"></script>
   </body>
 </html>

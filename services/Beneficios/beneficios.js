@@ -23,7 +23,7 @@ function enviarSolicitud(event) {
     tipoSolicitud: tipoSolicitud,
     descripcion: descripcion
   };
-  console.log(datosSolicitud)
+
   // Enviar la solicitud mediante fetch
   fetch('http://localhost:8080/solicitud/beneficio', {
     method: 'POST',
@@ -44,3 +44,34 @@ function enviarSolicitud(event) {
 }
 
 submitButton.addEventListener('click', enviarSolicitud);
+
+
+
+registrarBtn.onclick = (e) => {
+   e.preventDefault();
+   
+      const usuarioPersona = {
+         tipoSolicitud: tipoSolicitud,
+         descripcion: descripcion
+      }     
+      realizarPeticiónFetchPOST('personas', usuarioPersona, 'voluntario.html');
+};
+
+const realizarPeticiónFetchPOST = (ruta, objeto, rutaDeseada) => {
+   let valores = JSON.stringify(objeto);
+   fetch(`http://localhost:8080/solicitud/beneficios/${ruta}`, {
+      method: 'POST',
+      headers: {
+         'Content-Type': 'application/json'
+      },
+      body: valores,
+   })
+      .then((response) => {
+         if(response.ok) {
+            alert("La solicitud de beneficio se han PUBLICADO correctamente")
+            window.location.href = rutaDeseada;
+         } else {
+            alert("ERROR!!!!! No se ha podido publicar la solicitud")
+         }})
+      .catch((error) => console.error(error));
+};

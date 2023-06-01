@@ -34,7 +34,7 @@ registrarBtn.onclick = (e) => {
          celular: celularInput.value,
          direccion: direccionInput.value
       }
-      realizarPeticiónFetchPOST('fundaciones', usuarioFundacion);
+      realizarPeticiónFetchPOST('fundaciones', usuarioFundacion, 'voluntario.html');
    } else {
 
       const nuevaFecha = formatearFecha();
@@ -49,11 +49,11 @@ registrarBtn.onclick = (e) => {
          fechaNacimiento: nuevaFecha,
          genero: generoInput.value
       }     
-      realizarPeticiónFetchPOST('personas', usuarioPersona);
+      realizarPeticiónFetchPOST('personas', usuarioPersona, 'voluntario.html');
    }
 };
 
-const realizarPeticiónFetchPOST = (ruta, objeto) => {
+const realizarPeticiónFetchPOST = (ruta, objeto, rutaDeseada) => {
    let valores = JSON.stringify(objeto);
    fetch(`http://localhost:8080/usuarios/formulario/${ruta}`, {
       method: 'POST',
@@ -66,6 +66,7 @@ const realizarPeticiónFetchPOST = (ruta, objeto) => {
          if(response.ok) {
             alert("Los datos se han INSERTADO correctamente")
             form_register.reset();
+            window.location.href = rutaDeseada;
          } else {
             alert("ERROR!!!!! los datos NO se han insertado")
          }})
