@@ -1,0 +1,174 @@
+.fondo{
+    background: url(Imagenes/pexels-francesco-ungaro-2325446.jpg);
+    background-size:100%;
+}
+.fondoh{
+    background: url(Imagenes/pexels-miguel-á-padriñán-19670.jpg);
+    background-size:100%;
+}
+
+.fondoq{
+    background: url(Imagenes/pexels-artem-podrez-6823567.jpg);
+    background-size:100%;
+}
+
+.fondoi{
+  background: url(Imagenes/pexels-artem-podrez-6823567.jpg);
+  background-size:100%;
+}
+
+.fondor{
+  background: url(Imagenes/pexels-julia-m-cameron-6994985.jpg);
+  background-size:100%;
+}
+
+.fondof{
+  background: url(Imagenes/pexels-rdne-stock-project-6646917.jpg);
+  background-size:100%;
+}
+
+.fondob{
+  background: url(Imagenes/pexels-rdne-stock-project-6647116.jpg);
+  background-size:100%;
+}
+
+.carousel{
+    width: 70%;
+    margin: 0 auto;
+    margin-block-end: 100px;
+}
+
+.card{
+width: 80%;
+margin: 0 auto;
+}
+.card-body1{
+  background-color: #d2b4de;
+}
+
+.img-thumbnail{
+    width: 40%;
+    margin-left:auto;
+}
+
+.navbar navbar-expand-lg{
+    text-align: right;
+}
+
+.card-history{
+    width: 80%;
+    margin: 0 auto;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+}
+
+.card-titleh{
+    margin: 0 auto;
+    font-size: larger;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+.quienestext{
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+    font-family: 'Comfortaa', cursive;
+}
+
+.formulario{
+    width:370px;
+    background: #aed6f1 ;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    margin-block-end: 20px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  
+  .formulario h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #3d3d3d;
+  }
+  
+  .formulario label {
+    display: block;
+    font-size: 18px;
+    color: #3d3d3d;
+  }
+  
+  .formulario input[type="text"],
+  .formulario input[type="number"] {
+    width: 300px;
+    background: #85c1e9 ;
+    padding: 1px;
+    border-radius: 40px;
+    border: 2px solid  #2471a3 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .formulario input[type="text"]:focus,
+  .formulario input[type="number"]:focus {
+    outline: none;
+    border-bottom-color:  #2471a3;
+  }
+  
+  .formulario input[type="submit"] {
+    background-color: #019696;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .formulario input[type="submit"]:hover {
+    background-color:#2471a3 ;
+  }
+
+  .formulario1{
+    text-align: center;
+    display: inline-block;
+    width:450px;
+    background: #85c1e9;
+    padding: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-block-end: 20px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  
+
+  .chat-container{
+    text-align: center;
+    display: inline-block;
+    width:450px;
+    background: #85c1e9;
+    padding: 50px;
+    margin: auto;
+    margin-block-end: 20px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    margin-left: 100px;
+  }
