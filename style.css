@@ -2,6 +2,10 @@
     background: url(Imagenes/pexels-francesco-ungaro-2325446.jpg);
     background-size:100%;
 }
+.fondoVoluntariado{
+  background: url(Imagenes/pexels-athena-1963622.jpg);
+  background-size:100%;
+}
 .fondoh{
     background: url(Imagenes/pexels-miguel-á-padriñán-19670.jpg);
     background-size:100%;
@@ -107,6 +111,7 @@ margin: 0 auto;
   }
   
   .formulario input[type="text"],
+  .formulario input[type="email"],
   .formulario input[type="number"] {
     width: 300px;
     background: #85c1e9 ;
@@ -119,6 +124,7 @@ margin: 0 auto;
   }
   
   .formulario input[type="text"]:focus,
+  .formulario input[type="email"]:focus,
   .formulario input[type="number"]:focus {
     outline: none;
     border-bottom-color:  #2471a3;
