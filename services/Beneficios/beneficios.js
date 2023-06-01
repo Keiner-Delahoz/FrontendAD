@@ -25,7 +25,7 @@ function enviarSolicitud(event) {
   };
   console.log(datosSolicitud)
   // Enviar la solicitud mediante fetch
-  fetch('http://localhost:8080/donaciones', {
+  fetch('http://localhost:8080/solicitud/beneficio', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
