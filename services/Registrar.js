@@ -3,24 +3,52 @@ const idInput = document.getElementById('id');
 const nombreInput = document.getElementById('nombre');
 const apellidoInput = document.getElementById('apellido');
 const edadInput = document.getElementById('edad');
-const ubicacionInput = document.getElementById('ubicacion');
+const fechaNacimientoInput = document.getElementById('Nacimiento');
 const claveInput = document.getElementById('clave');
+const GeneroInput = document.getElementById('genero');
+const emailInput = document.getElementById('email');
 const registrarBtn = document.getElementById('btnGuardarAvion');
 
-const RegistraFundacion = async () => {
-  const tipoUsuario = tipoUsuarioSelect.value;
-  const id = idInput.value;
+
+
+const RegistraFundacion = async (e) => {
+    e.preventDefault();
+    const fechaInput = fechaNacimientoInput.value;
+    const fechaObj = new Date(fechaInput);
+    const yy = fechaObj.getFullYear();
+    const mm = ("0" + (fechaObj.getMonth() + 1)).slice(-2);
+    const dd = ("0" + fechaObj.getDate()).slice(-2);
+    const nuevaFecha = yy + "-" + mm + "-" + dd;
+    console.log(nuevaFecha);
+
+
+  const tipo = tipoUsuarioSelect.value;
+  const identificacion = idInput.value;
   const nombre = nombreInput.value;
   const apellido = apellidoInput.value;
-  const edad = edadInput.value;
-  const ubicacion = ubicacionInput.value;
-  const clave = claveInput.value;
+  const email = emailInput.value;
+  const fechaNacimiento = nuevaFecha;
+  const password = claveInput.value;
+  const genero = GeneroInput.value;
+  
 
+  const datos = {
+        tipo,
+        nombre,
+        apellido,
+        identificacion,
+        email,
+        password,
+        fechaNacimiento,
+        genero
+  }
+  console.log(datos)
+  console.log(JSON.stringify(datos))
   let endpoint = '';
 
-  if (tipoUsuario === 'Voluntario'|| tipoUsuario === 'Beneficiario' ) {
+  if (tipo === 'Voluntario'|| tipo === 'Beneficiario' ) {
     endpoint = 'http://localhost:8080/usuarios/formulario/personas';
-  } else if (tipoUsuario === 'Fundacion') {
+  } else if (tipo === 'Fundacion') {
     endpoint = 'http://localhost:8080/usuarios/formulario/fundaciones';
   } 
 
@@ -30,14 +58,7 @@ const RegistraFundacion = async () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        id,
-        nombre,
-        apellido,
-        edad,
-        ubicacion,
-        clave
-      })
+      body: JSON.stringify(datos)
     });
 
     if (response.ok) {

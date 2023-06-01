@@ -49,7 +49,7 @@
       </nav>
 
       <div class="container">
-        <form class="formulario" method="POST">
+        <form class="formulario">
            <h1>Registrarse</h1>
 
            <select id="tipoUsuario" class="form-select" aria-label="Default select example">
@@ -68,14 +68,17 @@
            <label for="apellido">Apelllido:</label>
            <input type="text" id="apellido" required><br>
   
-           <label for="edad">Edad:</label>
-           <input type="number" id="edad" required><br>
-  
-           <label for="ubicacion">Ubicacion:</label>
-           <input type="text" id="ubicacion" required><br>
+           <label for="Nacimiento">fecha de Nacimiento:</label>
+           <input type="date" id="Nacimiento" required><br>
 
            <label for="clave">Contraseña:</label>
            <input type="text" id="clave" required><br>
+
+           <label for="genero">genero:</label>
+           <input type="text" id="genero" required><br>
+           
+           <label for="email">email:</label>
+           <input type="email" id="email" required><br>
   
            <input type="submit" value="Registrar" id="btnGuardarAvion">
         </form>
