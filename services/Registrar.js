@@ -8,23 +8,36 @@ const claveInput = document.getElementById('clave');
 const registrarBtn = document.getElementById('btnGuardarAvion');
 
 const RegistraFundacion = async () => {
-  const data = {
-    tipoUsuario: tipoUsuarioSelect.value,
-    id: idInput.value,
-    nombre: nombreInput.value,
-    apellido: apellidoInput.value,
-    edad: edadInput.value,
-    ubicacion: ubicacionInput.value,
-    clave: claveInput.value
-  };
+  const tipoUsuario = tipoUsuarioSelect.value;
+  const id = idInput.value;
+  const nombre = nombreInput.value;
+  const apellido = apellidoInput.value;
+  const edad = edadInput.value;
+  const ubicacion = ubicacionInput.value;
+  const clave = claveInput.value;
+
+  let endpoint = '';
+
+  if (tipoUsuario === 'Voluntario'|| tipoUsuario === 'Beneficiario' ) {
+    endpoint = 'http://localhost:8080/usuarios/formulario/personas';
+  } else if (tipoUsuario === 'Fundacion') {
+    endpoint = 'http://localhost:8080/usuarios/formulario/fundaciones';
+  } 
 
   try {
-    const response = await fetch('http://localhost:8080/usuarios/formulario/personas', {
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify({
+        id,
+        nombre,
+        apellido,
+        edad,
+        ubicacion,
+        clave
+      })
     });
 
     if (response.ok) {
